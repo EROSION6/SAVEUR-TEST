@@ -44,8 +44,8 @@ export const BookingForm: React.FC<BookingFormProps> = ({
 
 	return (
 		<div className='bg-white rounded-xl shadow-lg p-6 sm:p-8 max-w-lg mx-auto'>
-			<div className='text-center mb-6'>
-				<h2 className='text-4xl font-bold text-[#1A1A1A] mb-4'>
+			<div className='text-center mb-4 sm:mb-6'>
+				<h2 className='text-2xl sm:text-4xl font-bold text-[#1A1A1A] mb-2 sm:mb-4'>
 					Бронирование столика
 				</h2>
 				<p className='text-[#1A1A1A]/80 text-sm'>
