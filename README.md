@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Бронирование столиков
 
-## Getting Started
+Проект на Next.js 15 с использованием TypeScript и Tailwind CSS.
 
-First, run the development server:
+## Принятые решения
+
+- **Хук useBookingForm** — вынес логику формы для переиспользования и читаемости. Компонент `BookingForm` занимается только отрисовкой, а вся валидация и состояние в хуке.
+- **Tailwind CSS** — ускорил вёрстку в разы. Не нужно писать кастомные CSS-файлы
+- **Переиспользуемые UI-компоненты Button, Input, Dropdown** — избавляют от дублирования кода. Пригодятся в будущих разделах проекта, а также делают код читаемым и простым в поддержке.
+
+## Что бы я доделал при наличии времени
+
+1. **Оптимизировал код** — вынес повторяющуюся логику, сделал код чище и производительнее.
+2. **Личный кабинет пользователя** — отдельная страница со списком всех броней (предстоящие, прошедшие, отменённые) и их статусами.
+3. **Главный лендинг** — красивая презентация ресторана с фото, меню, отзывами и контактами, а форма бронирования отдельным блоком.
+4. **Фильтрацию и поиск** по броням (по дате, статусу).
+
+## Как запустить проект локально
 
 ```bash
+# 1. Клонируй репозиторий
+git clone <your-repo-url>
+cd <project-folder>
+
+# 2. Установи зависимости
+npm install
+
+# 3. Запусти дев-сервер
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# 4. Открой браузер по адресу
+# http://localhost:3000
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
