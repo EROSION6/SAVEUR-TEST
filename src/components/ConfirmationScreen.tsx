@@ -5,6 +5,7 @@ import React from 'react'
 import check from '../assets/check.svg'
 import { BookingFormData } from '../types/booking'
 import { Button } from './ui/Button'
+import { truncateText } from '../utils/stringUtils'
 
 interface ConfirmationScreenProps {
 	bookingData: BookingFormData
@@ -20,8 +21,9 @@ export const ConfirmationScreen: React.FC<ConfirmationScreenProps> = ({
 		[bookingData.date],
 	)
 
+
 	const details = [
-		{ label: 'Гость', value: bookingData.name },
+		{ label: 'Гость', value: truncateText(bookingData.name) },
 		{ label: 'Телефон', value: bookingData.phone },
 		{ label: 'Дата', value: formattedDate },
 		{ label: 'Время', value: bookingData.time },
